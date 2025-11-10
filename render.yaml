@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: ai-model-comparison-tool
+    runtime: node
+    region: oregon
+    plan: free
+    buildCommand: cd web && npm install && npm run build
+    startCommand: cd web && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DASHBOARD_PASSWORD
+        sync: false
+      - key: NEXT_PUBLIC_S3_BUCKET
+        sync: false
+      - key: NEXT_PUBLIC_AWS_REGION
+        value: us-east-1
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+
