@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Configuration for Next.js on Amplify
+  // Output standalone for better Amplify compatibility
+  output: 'standalone',
 };
 
 export default nextConfig;
