@@ -7,6 +7,7 @@ frontend:
     build:
       commands:
         - npm run build
+        - node generate-manifest.js
   artifacts:
     baseDirectory: .next
     files:
