@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Empty config - let Amplify auto-detect Next.js
-  // Amplify WEB_COMPUTE should handle SSR automatically
+  // Empty config - default Next.js output
 };
 
 module.exports = nextConfig;

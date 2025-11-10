@@ -1,23 +1,21 @@
 version: 1
-applications:
-  - appRoot: web
-    platform: WEB_COMPUTE
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - npm ci --legacy-peer-deps
-        build:
-          commands:
-            - npm run build
-            - echo '{"version":1,"framework":{"name":"next","version":"14.2.33"},"imageOptimization":{"path":"/_next/image","loader":"default"}}' > .next/deploy-manifest.json
-      artifacts:
-        baseDirectory: .next
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
-          - .next/cache/**/*
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - cd web
+        - npm ci --legacy-peer-deps
+    build:
+      commands:
+        - cd web
+        - npm run build
+  artifacts:
+    baseDirectory: web/.next
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - web/node_modules/**/*
+      - web/.next/cache/**/*
 
 
