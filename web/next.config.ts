@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Removed 'standalone' output - incompatible with Amplify WEB_COMPUTE
-  // Amplify requires deploy-manifest.json which is generated with default Next.js output
+  // Empty config - let Amplify auto-detect Next.js
+  // Amplify WEB_COMPUTE should handle SSR automatically
 };
 
 export default nextConfig;
