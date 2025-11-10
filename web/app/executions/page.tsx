@@ -19,12 +19,16 @@ export default function ExecutionsPage() {
     fetch('/api/executions')
       .then((res) => res.json())
       .then((data) => {
-        setExecutions(data);
-        setFilteredExecutions(data);
+        // Ensure data is an array
+        const executionsList = Array.isArray(data) ? data : [];
+        setExecutions(executionsList);
+        setFilteredExecutions(executionsList);
         setLoading(false);
       })
       .catch((err) => {
         console.error('Error fetching executions:', err);
+        setExecutions([]);
+        setFilteredExecutions([]);
         setLoading(false);
       });
   }, []);
