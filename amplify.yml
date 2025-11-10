@@ -3,9 +3,13 @@ frontend:
   phases:
     preBuild:
       commands:
+        - ls -la
+        - pwd
         - cd web && npm ci --legacy-peer-deps
     build:
       commands:
+        - ls -la
+        - pwd
         - cd web && npm run build
   artifacts:
     baseDirectory: web/.next
