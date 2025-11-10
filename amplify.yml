@@ -8,6 +8,8 @@ frontend:
       commands:
         - npm run build
         - node generate-manifest.js
+        - ls -la .next/
+        - cat .next/deploy-manifest.json
   artifacts:
     baseDirectory: .next
     files:
