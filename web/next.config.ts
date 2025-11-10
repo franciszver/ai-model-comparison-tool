@@ -1,12 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Suppress workspace root warning in Amplify builds
-  experimental: {
-    turbo: {
-      root: process.cwd(),
-    },
-  },
+  // Configuration for Next.js on Amplify
 };
 
 export default nextConfig;
