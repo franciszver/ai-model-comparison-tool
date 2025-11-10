@@ -32,6 +32,7 @@ npm-debug.log*
 *.tsbuildinfo
 
 # Sensitive information
+_docs/buildfailures
 AMPLIFY_QUICK_START.md
 *.env.local
 *.env.*.local
