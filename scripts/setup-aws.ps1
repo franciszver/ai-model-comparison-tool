@@ -102,7 +102,7 @@ if (-not (Test-Path $webEnvPath)) {
     $webEnvContent = @"
 NEXT_PUBLIC_S3_BUCKET=$BUCKET_NAME
 NEXT_PUBLIC_AWS_REGION=$REGION
-DASHBOARD_PASSWORD=demo2024
+DASHBOARD_PASSWORD=your-secure-password
 "@
     Set-Content -Path $webEnvPath -Value $webEnvContent
     Write-Host "[OK] web/.env.local created" -ForegroundColor Green

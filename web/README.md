@@ -48,7 +48,7 @@ cp .env.example .env.local
 ```
 NEXT_PUBLIC_S3_BUCKET=your-s3-bucket-name
 NEXT_PUBLIC_AWS_REGION=us-east-1
-DASHBOARD_PASSWORD=demo2024
+DASHBOARD_PASSWORD=your-secure-password
 ```
 
 ### Development
@@ -104,7 +104,7 @@ See `scripts/setup-amplify.sh` for instructions, or:
 
 ### Optional
 
-- `DASHBOARD_PASSWORD` - Password for dashboard access (default: demo2024)
+- `DASHBOARD_PASSWORD` - Password for dashboard access (set a strong password)
 - `NEXT_PUBLIC_CLOUDFRONT_URL` - CloudFront distribution URL (if using CloudFront)
 
 ## Project Structure
@@ -129,7 +129,7 @@ web/
 ### Accessing the Dashboard
 
 1. Navigate to the dashboard URL (after deployment)
-2. Enter the password (default: `demo2024`)
+2. Enter the password (the password you set in environment variables)
 3. Browse executions, view comparisons, and analyze results
 
 ### Viewing Executions

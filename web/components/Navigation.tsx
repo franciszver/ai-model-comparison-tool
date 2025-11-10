@@ -2,40 +2,10 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, List, BarChart3, Moon, Sun, Target } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { Home, List, BarChart3, Target } from 'lucide-react';
 
 export function Navigation() {
   const pathname = usePathname();
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    // Check localStorage first, then system preference
-    const stored = localStorage.getItem('darkMode');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const shouldBeDark = stored !== null ? stored === 'true' : prefersDark;
-    
-    if (shouldBeDark) {
-      document.documentElement.classList.add('dark');
-      setDarkMode(true);
-    } else {
-      document.documentElement.classList.remove('dark');
-      setDarkMode(false);
-    }
-  }, []);
-
-  const toggleDarkMode = () => {
-    const newDarkMode = !darkMode;
-    setDarkMode(newDarkMode);
-    
-    if (newDarkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('darkMode', 'true');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('darkMode', 'false');
-    }
-  };
 
   const navItems = [
     { href: '/', label: 'Dashboard', icon: Home },
@@ -75,13 +45,6 @@ export function Navigation() {
               })}
             </div>
           </div>
-          <button
-            onClick={toggleDarkMode}
-            className="rounded-md p-2 text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800"
-            aria-label="Toggle dark mode"
-          >
-            {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </button>
         </div>
       </div>
     </nav>

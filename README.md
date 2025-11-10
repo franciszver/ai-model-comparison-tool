@@ -206,7 +206,7 @@ outputs/
    ```
    NEXT_PUBLIC_S3_BUCKET=your-bucket-name
    NEXT_PUBLIC_AWS_REGION=us-east-1
-   DASHBOARD_PASSWORD=demo2024
+   DASHBOARD_PASSWORD=your-secure-password
    ```
 
 4. **Run dashboard locally:**
@@ -329,7 +329,7 @@ ai-model-comparison-tool/
 
 - `NEXT_PUBLIC_S3_BUCKET`: S3 bucket name (required for dashboard)
 - `NEXT_PUBLIC_AWS_REGION`: AWS region (default: us-east-1)
-- `DASHBOARD_PASSWORD`: Dashboard password (default: demo2024)
+- `DASHBOARD_PASSWORD`: Dashboard password (set a strong password)
 - `NEXT_PUBLIC_CLOUDFRONT_URL`: CloudFront distribution URL (optional)
 
 ## 💡 Cost Optimization Tips

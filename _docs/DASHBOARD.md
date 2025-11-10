@@ -44,9 +44,9 @@ cp .env.example .env.local
 
 Edit `web/.env.local`:
 ```
-NEXT_PUBLIC_S3_BUCKET=hibid-ai-comparison-YYYYMMDDHHMMSS
+NEXT_PUBLIC_S3_BUCKET=YOUR_S3_BUCKET_NAME
 NEXT_PUBLIC_AWS_REGION=us-east-1
-DASHBOARD_PASSWORD=demo2024
+DASHBOARD_PASSWORD=YOUR_SECURE_PASSWORD
 ```
 
 ### 4. Run Dashboard Locally
@@ -57,7 +57,7 @@ npm run dashboard:dev
 
 Open [http://localhost:3000](http://localhost:3000)
 
-**Password:** `demo2024` (or whatever you set in `.env.local`)
+**Password:** `YOUR_SECURE_PASSWORD` (the password you set in `.env.local`)
 
 ## Deployment
 
@@ -70,7 +70,7 @@ Open [http://localhost:3000](http://localhost:3000)
 5. Add environment variables:
    - `NEXT_PUBLIC_S3_BUCKET` = your bucket name
    - `NEXT_PUBLIC_AWS_REGION` = us-east-1
-   - `DASHBOARD_PASSWORD` = demo2024
+   - `DASHBOARD_PASSWORD` = your secure password
 6. Deploy!
 
 ## Architecture
@@ -105,7 +105,7 @@ Open [http://localhost:3000](http://localhost:3000)
 
 ### Optional
 
-- `DASHBOARD_PASSWORD` - Password for dashboard access (default: demo2024)
+- `DASHBOARD_PASSWORD` - Password for dashboard access (set a strong password)
 - `NEXT_PUBLIC_CLOUDFRONT_URL` - CloudFront distribution URL (if using CloudFront)
 
 ## Uploading Results to S3

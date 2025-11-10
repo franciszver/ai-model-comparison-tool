@@ -105,7 +105,7 @@ amplify.yml                         # Amplify build config
 **Web `.env.local`:**
 - `NEXT_PUBLIC_S3_BUCKET` - S3 bucket name (for frontend)
 - `NEXT_PUBLIC_AWS_REGION` - AWS region
-- `DASHBOARD_PASSWORD` - Dashboard password (default: demo2024)
+- `DASHBOARD_PASSWORD` - Dashboard password (set a strong password)
 
 ## Usage
 

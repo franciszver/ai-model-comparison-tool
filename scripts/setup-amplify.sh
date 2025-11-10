@@ -23,7 +23,7 @@ if ! command -v amplify &> /dev/null; then
   echo "5. Add environment variables:"
   echo "   - NEXT_PUBLIC_S3_BUCKET=<your-bucket-name>"
   echo "   - NEXT_PUBLIC_AWS_REGION=us-east-1"
-  echo "   - DASHBOARD_PASSWORD=demo2024"
+  echo "   - DASHBOARD_PASSWORD=<your-secure-password>"
   echo ""
   exit 0
 fi
@@ -32,7 +32,7 @@ echo "📋 Environment variables needed for Amplify:"
 echo ""
 echo "NEXT_PUBLIC_S3_BUCKET=<your-s3-bucket-name>"
 echo "NEXT_PUBLIC_AWS_REGION=us-east-1"
-echo "DASHBOARD_PASSWORD=demo2024"
+echo "DASHBOARD_PASSWORD=<your-secure-password>"
 echo ""
 echo "These will be set during Amplify app creation."
 echo ""

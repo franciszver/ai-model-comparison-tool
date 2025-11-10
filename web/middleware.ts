@@ -12,7 +12,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  const password = process.env.DASHBOARD_PASSWORD || 'demo2024';
+  const password = process.env.DASHBOARD_PASSWORD || 'change-me-in-production';
   const authHeader = request.headers.get('authorization');
 
   // Check if password is provided in Authorization header

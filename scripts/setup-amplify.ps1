@@ -27,7 +27,7 @@ if (-not $amplifyInstalled) {
     Write-Host "5. Add environment variables:" -ForegroundColor White
     Write-Host "   - NEXT_PUBLIC_S3_BUCKET=<your-bucket-name>" -ForegroundColor Gray
     Write-Host "   - NEXT_PUBLIC_AWS_REGION=us-east-1" -ForegroundColor Gray
-    Write-Host "   - DASHBOARD_PASSWORD=demo2024" -ForegroundColor Gray
+    Write-Host "   - DASHBOARD_PASSWORD=<your-secure-password>" -ForegroundColor Gray
     Write-Host ""
     exit 0
 }
@@ -36,7 +36,7 @@ Write-Host "📋 Environment variables needed for Amplify:" -ForegroundColor Cya
 Write-Host ""
 Write-Host "NEXT_PUBLIC_S3_BUCKET=<your-s3-bucket-name>" -ForegroundColor White
 Write-Host "NEXT_PUBLIC_AWS_REGION=us-east-1" -ForegroundColor White
-Write-Host "DASHBOARD_PASSWORD=demo2024" -ForegroundColor White
+Write-Host "DASHBOARD_PASSWORD=<your-secure-password>" -ForegroundColor White
 Write-Host ""
 Write-Host "These will be set during Amplify app creation." -ForegroundColor Gray
 Write-Host ""
