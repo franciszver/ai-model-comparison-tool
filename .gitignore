@@ -31,4 +31,28 @@ npm-debug.log*
 # TypeScript
 *.tsbuildinfo
 
-
+# Sensitive information
+AMPLIFY_QUICK_START.md
+*.env.local
+*.env.*.local
+.env.production
+.env.development
+*.secret
+*secret*
+*.key
+*credentials*
+*password*
+aws-credentials.json
+config.local.json
+.secrets
+secrets/
+*.pem
+*.p12
+*.pfx
+AMPLIFY_DEPLOY_QUICK_START.md
+.gitignore
+scripts/setup-amplify-console.ps1
+scripts/create-amplify-app.ps1
+scripts/connect-amplify.ps1
+DEPLOYMENT_CHECKLIST.md
+AMPLIFY_404_FIX.md
