@@ -60,3 +60,4 @@ AMPLIFY_404_FIX.md
 _docs/buildfailures/BUILD.txt
 .gitignore
 _docs/buildfailures/DEPLOY.txt
+RENDER_DEPLOY.md
