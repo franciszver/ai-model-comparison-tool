@@ -1,16 +1,28 @@
 // Create deploy-manifest.json for Amplify WEB_COMPUTE
+// This follows the Amplify deploy manifest schema for Next.js
 const fs = require('fs');
 const path = require('path');
 
 const manifest = {
   version: 1,
-  framework: 'nextjs',
-  buildCommand: 'npm run build',
-  devCommand: 'npm run dev',
-  installCommand: 'npm ci',
-  outputDirectory: '.next',
-  serverCommand: 'npm start',
-  serverPort: 3000,
+  framework: {
+    name: 'nextjs',
+    version: '16.0.1',
+  },
+  build: {
+    commands: {
+      preBuild: 'cd web && npm ci',
+      build: 'cd web && npm run build',
+    },
+  },
+  runtime: {
+    name: 'nodejs',
+    version: '18.x',
+  },
+  server: {
+    command: 'cd web && npm start',
+    port: 3000,
+  },
   routes: [
     {
       path: '/*',
