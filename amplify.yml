@@ -10,6 +10,7 @@ applications:
         build:
           commands:
             - npm run build
+            - echo '{"version":1,"framework":{"name":"next","version":"14.2.33"},"imageOptimization":{"path":"/_next/image","loader":"default"}}' > .next/deploy-manifest.json
       artifacts:
         baseDirectory: .next
         files:
