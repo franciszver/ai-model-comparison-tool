@@ -1,0 +1,47 @@
+{
+  "name": "ai-model-comparison-tool",
+  "version": "1.0.0",
+  "description": "Node.js CLI tool for comparing multiple AI models via OpenRouter for image classification",
+  "main": "dist/index.js",
+  "bin": {
+    "ai-model-compare": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "compare": "node dist/index.js compare",
+    "analyze": "node dist/index.js analyze",
+    "verify": "node scripts/verify-setup.js",
+    "demo": "pwsh -ExecutionPolicy Bypass -File scripts/demo-prd-requirements.ps1",
+    "prep": "npm install && npm run build && npm run verify",
+    "migrate-s3": "node scripts/migrate-to-s3.js",
+    "setup-aws": "powershell -ExecutionPolicy Bypass -File scripts/setup-aws.ps1",
+    "setup-amplify": "powershell -ExecutionPolicy Bypass -File scripts/setup-amplify.ps1",
+    "dashboard:dev": "cd web && npm run dev",
+    "dashboard:build": "cd web && npm run build",
+    "dashboard:start": "cd web && npm start"
+  },
+  "keywords": [
+    "ai",
+    "openrouter",
+    "model-comparison",
+    "cli",
+    "image-classification"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "axios": "^1.6.2",
+    "cli-table3": "^0.6.5",
+    "dotenv": "^16.3.1",
+    "@aws-sdk/client-s3": "^3.490.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2"
+  }
+}
+

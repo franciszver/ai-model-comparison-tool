@@ -1,0 +1,83 @@
+{
+  "defaultSets": {
+    "cheap": [
+      "openai/gpt-4o-mini",
+      "google/gemini-flash-1.5",
+      "anthropic/claude-3-haiku"
+    ],
+    "standard": [
+      "openai/gpt-4o",
+      "google/gemini-pro-1.5",
+      "anthropic/claude-3-opus"
+    ],
+    "premium": [
+      "openai/gpt-4-turbo",
+      "google/gemini-ultra",
+      "anthropic/claude-3.5-sonnet"
+    ]
+  },
+  "models": {
+    "openai/gpt-4o-mini": {
+      "name": "GPT-4o Mini",
+      "provider": "OpenAI",
+      "vision": true,
+      "pricing": {
+        "input": 0.15,
+        "output": 0.6
+      },
+      "unit": "per_1M_tokens"
+    },
+    "openai/gpt-4o": {
+      "name": "GPT-4o",
+      "provider": "OpenAI",
+      "vision": true,
+      "pricing": {
+        "input": 2.5,
+        "output": 10.0
+      },
+      "unit": "per_1M_tokens"
+    },
+    "google/gemini-flash-1.5": {
+      "name": "Gemini Flash 1.5",
+      "provider": "Google",
+      "vision": true,
+      "pricing": {
+        "input": 0.075,
+        "output": 0.3
+      },
+      "unit": "per_1M_tokens"
+    },
+    "google/gemini-pro-1.5": {
+      "name": "Gemini Pro 1.5",
+      "provider": "Google",
+      "vision": true,
+      "pricing": {
+        "input": 1.25,
+        "output": 5.0
+      },
+      "unit": "per_1M_tokens"
+    },
+    "anthropic/claude-3-haiku": {
+      "name": "Claude 3 Haiku",
+      "provider": "Anthropic",
+      "vision": true,
+      "pricing": {
+        "input": 0.25,
+        "output": 1.25
+      },
+      "unit": "per_1M_tokens"
+    },
+    "anthropic/claude-3-opus": {
+      "name": "Claude 3 Opus",
+      "provider": "Anthropic",
+      "vision": true,
+      "pricing": {
+        "input": 15.0,
+        "output": 75.0
+      },
+      "unit": "per_1M_tokens"
+    }
+  }
+}
+
+
