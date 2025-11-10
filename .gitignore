@@ -61,3 +61,5 @@ _docs/buildfailures/BUILD.txt
 .gitignore
 _docs/buildfailures/DEPLOY.txt
 RENDER_DEPLOY.md
+RENDER_SETUP.md
+RENDER_TROUBLESHOOTING.md
