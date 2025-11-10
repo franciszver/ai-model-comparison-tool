@@ -6,7 +6,7 @@ services:
     plan: free
     rootDir: web
     buildCommand: npm install --legacy-peer-deps && npm run build
-    startCommand: npm start
+    startCommand: npx next start
     envVars:
       - key: NODE_ENV
         value: production
